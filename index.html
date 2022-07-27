@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 
 <html>
-<head>first tab</head>
+<head>
+    <title> HTML & CSS</title>
+    <style>
+        body {background-color: royalblue; color: aliceblue}
+        h1 { text-align: center}
+        div {background-color: blueviolet;}
+
+        #list-container {border-style: solid}
+        /* to target a tag with "id" to style with specifically we use # */
+     
+    </style>
+</head>
 <body>
     <h1>My first feature commit</h1>
     <h2>My first heading</h2>
@@ -11,10 +22,18 @@
     <br>
     <p>My first paragraph</p>
 
-    <div>
-        <p>Paragraph 2</p>
+    <div style="font-family:Verdana; font-size :18px">
+        <p style="font-size: 10px">Paragraph 2</p>
         <p>Paragraph 3</p>
-        <p>Paragraph 4</p>
+        <p style="font-family:Courier">Paragraph 4</p>
+        <p><strong> Important Text: strong tag</strong></p>
+        <p><em> Emphasized Text: em tag</em></p>
+
+        <p><b>Bold Text: b tag</b></p>
+        <p><i>Italic Text: i tag</i></p>
+        <!-- this is to understnag how to move the letters up or down -->
+        <p>x<sup>100</sup></p>
+        <p>h<sub>2</sub>o</p>
 
 
     </div>
@@ -31,12 +50,30 @@
 
     </div>
 <br />
-    <div>
+    <div style="border-style: solid ">
         <a href="#">My first Link</a>
         <a href="https://google.com" target="_blank">My first Link</a>
 
 
 
     </div>
+<br />
+    <div id="list-container">
+        <ul>
+            <li>Rice</li>
+            <li>Chicken</li>
+            <li>Egg</li>
+            
+        </ul>
+
+        <ol>
+            <li>Start Programme</li>
+            <li>Validate the code</li>
+            <li>Run Code</li>
+        </ol>
+    </div>
+
+    <p>A New Paragraph <span style="font-family:Courier">Inline Style - span tag</span></p>
+    <iframe  width="560" height="315" src="https://www.youtube.com/embed/tQsiH7odkOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>
