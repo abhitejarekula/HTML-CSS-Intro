@@ -3,14 +3,13 @@
     <head>
         <title>HTML & CSS</title>
         <style>
-            body {background-color: royalblue; color: aliceblue}
-            h1 { text-align: center }
-            div { background-color: blueviolet; }
-
+            body {background-color: rgb(65, 105, 225, 1.0); color: aliceblue}
+            h1 { text-align: center; text-shadow: 2px 2px red }
+            /* div { background-color: blueviolet; } */
+            
             /* to target a tag with "id" to style it specifically - use # in our CSS*/
-            #list-container { border-style: solid } 
-            #list-container { border-style: solid; border-width: 6px ; background-color: red; } 
-
+            #list-container { border-style: solid; border-width: 6px ; background-color: red; box-shadow: 20px 10px 5px black } 
+        
             /* to style "class" - we use "." */
             .grocery-list {color: blue; list-style-type: square; font-size: 20px}
             .todo-list {background-color: aquamarine;}
@@ -34,6 +33,7 @@
 
             .flex-box-example {
                 display: flex;
+                flex-direction: column;
                 list-style-type: none;
                 background-color: brown;
                 padding: 0px;
@@ -47,37 +47,128 @@
             .list-item {
                 width: 20px;
                 height: 20px;
-                background-color: green;
+                background-color: rgb(191, 64, 64);
+            }
+
+            .form-wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .registration-form {
+                background-color: rgb(29, 104, 155);
+                display: flex;
+                flex-direction: column;
+                width: 70%;
+                margin: 0 auto 0 auto;
+            }
+
+            .form-title {
+                margin: 20px 20px;
+                text-align: center;
+            }
+
+            .input-group {
+                display: flex;
+                flex-direction: column;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #email, #firstName, #lastName, #password {
+                display: block;
+            }
+
+            .firstName, .lastName, .email, .password, .rememberMe {
+                margin-bottom: 10px;
+            }
+
+            .register-btn-container {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+
+            .link-container {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .link {
+                margin-bottom: 20px;
+            }
+
+            .submit {
+                padding: 20px
             }
         </style>
     </head>
     <body>
-        <h1>My First Feature Commit</h1>
+        <nav>
+            <a href="#" target="_blank">
+                <img src="logo.svg" alt="logo" />
+            </a>
+        </nav>
         <h1 class="title" id="title" style="color: white !important">My First Feature Commit</h1>
         <h2>My First Heading</h2>
         <h3>My First Heading</h3>
         <h4>My First Heading</h4>
-@@ -56,13 +95,13 @@ <h5>My First Heading</h5>
+        <h5>My First Heading</h5>
+        <br />
+        <p>My first paragraph</p>
+
+        <div style="font-family:verdana; font-size: 18px;">
+            <p style="font-size: 12px;">Paragraph 2</p>
+            <p>Paragraph 3</p>
+            <p style="font-family:courier">Paragraph 4</p>
+            <p><strong>Important Text: strong tag</strong></p>
+            <p><em>Emphasized Text: em tag</em></p>
+
+            <p><b>Bold Text: b tag</b></p>
+            <p><i>Italic Text: i tag</i></p>
+
+            <!-- Write your comments here -->
+
+            <p>x<sup>100</sup></p>
+            <p>h<sub>2</sub>o</p>
+        </div>
+
+        <div>
+            <input type="text" />
+            <input type="number" />
+            <input type="date" />
+            <input type="file" />
+            <input type="email" />
+            <input type="password" />
+        </div>
+
+        <br />
+
+        <div>
+            <a href="#">My first link</a>
+            <a href="https://google.com" target="_blank">My Google Link</a>
+        </div>
+
         <br />
 
         <div id="list-container">
-            <ul>
             <ul class="grocery-list">
                 <li>Milk</li>
                 <li>Orange</li>
                 <li>Apple</li>
             </ul>
 
-            <ol>
             <ol class="todo-list">
                 <li>Go to class</li>
                 <li>Go to work</li>
                 <li>Go shopping</li>
-@@ -71,5 +110,20 @@ <h5>My First Heading</h5>
+            </ol>
+        </div>
 
         <p>My new paragraph <span style="font-family:courier">Inline Style - span tag</span></p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/8iTyutzJ9gc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/F5mk_hbLsaM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
         <div class="box-model">My Box Model</div>
 
         <button class="first-button">My Button</button>
@@ -91,6 +182,56 @@
             <div class="list-item">2</div>
             <div class="list-item">3</div>
         </ul>
+    
+    <div class="form-wrapper">
+        <form class="registration-form">
+            <h3 class="form-title">
+                <strong>
+                    Registration Form
+                </strong>
+            </h3>
+            <hr />
 
+            <div class="input-group">
+                <label for="firstName" class="firstName">
+                    First Name: 
+                    <input id="firstName" name="firstName" type="text" />
+                </label>
+
+                <label for="lastName" class="lastName">
+                    Last Name: 
+                    <input id="lastName" name="lastName" type="text" />
+                </label>
+
+                <label for="email" class="email">
+                    Email: 
+                    <input id="email" name="email" type="email" />
+                </label>
+                <label for="password" class="password">
+                    Password: 
+                    <input id="password" name="password" type="password" />  
+                </label>
+
+                <label for="rememberMe" class="rememberMe">
+                    <input id="rememberMe" name="rememberMe" type="checkbox" />
+                    Remember Me
+                </label>
+
+            </div>
+            
+            <div class="register-btn-container">
+                <button type="submit" class="submit">Register</button>
+            </div>
+
+            <div class="link-container">
+                <a class="link" href="#">Have an account already? Log in here.</a>
+                <a class="link" href="#">Return to HomePage</a>
+            </div>
+
+            <hr />
+
+        </form>
+    </div>
+        
     </body>
-</html> 
+</html>
