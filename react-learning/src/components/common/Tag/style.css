@@ -1,0 +1,12 @@
+.tag {
+    background-color: blueviolet;
+    color : aliceblue;
+    max-width: 5%;
+
+}
+
+@media only screen and (min-width: 600px) {
+    .tag {
+    background-color: red
+    }
+}
