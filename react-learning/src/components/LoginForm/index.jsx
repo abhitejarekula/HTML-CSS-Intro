@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import "./mainstyle.css"
+import "./style.css"
 const initialForm = {
   username: "",
   password: ""
 }
 
-function Form () {
+function LoginForm () {
   const [form, setForm] = useState(initialForm)
   const [name, setName] = useState("")
 
@@ -33,7 +33,7 @@ function Form () {
              </label>
             </div>
             <div className='button-container'>
-             <button></button>
+             <button>Login</button>
             </div>
         </div>
     </form>
@@ -43,4 +43,4 @@ function Form () {
   
 }
 
-export default Form
+export default LoginForm
