@@ -1,36 +1,60 @@
-import React from 'react'
-import logo from "./components/EcommerceSite"
-import search from "./components/EcommerceSite"
-import cart from "./components/EcommerceSite"
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChair } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
-function EcommerceSite () {
-    return ( 
-    <div className='flex flex-col justify-between h-screen'>
-      <nav className='flex justify-between bg-slate-300 p-5'>
-        <div>
-            <img className="my-auto mx-auto" src={logo}/>
-            Cozy
+function EcommerceSite() {
+  return (
+    <div className="flex flex-col justify-between h-screen">
+      <nav className="flex justify-between bg-slate-300 p-5">
+        <div className="m-3">
+          <FontAwesomeIcon icon={faChair}></FontAwesomeIcon>
+          Cozy
         </div>
 
         <div>
-            <ul>
-                <li><a>Shop</a></li>
-                <li><a>collective</a></li>
-                <li><a>Designers</a></li>
-                <li><a>About Us</a></li>
-                <li><a>Contact</a></li>
-            </ul>
+          <ul className="flex">
+            <li className="m-3">
+              <a>Shop</a>
+            </li>
+            <li className="m-3">
+              <a>collective</a>
+            </li>
+            <li className="m-3">
+              <a>Designers</a>
+            </li>
+            <li className="m-3">
+              <a>About Us</a>
+            </li>
+            <li className="m-3">
+              <a>Contact</a>
+            </li>
+          </ul>
         </div>
 
         <div>
-            <ul>
-            <li><button>=</button></li>
-            <li><a><img src={search}/></a></li>
-            <li><a><img src={cart}/></a></li>
-            </ul>
+          <ul className="flex">
+            <li className="m-3">
+              <a>
+                <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
+              </a>
+            </li>
+            <li className="m-3">
+              <a>
+                <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
+              </a>
+            </li>
+            <li className="m-3">
+              <a>
+                <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
+              </a>
+            </li>
+          </ul>
         </div>
-        </nav>
+      </nav>
     </div>
-  )
+  );
 }
-export default EcommerceSite
+export default EcommerceSite;
