@@ -6,6 +6,29 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 function EcommerceSite() {
+  const tabs = [
+    {
+      name: "Shop",
+      href: "#",
+    },
+    {
+      name: "collective",
+      href: "#",
+    },
+    {
+      name: "Designers",
+      href: "#",
+    },
+    {
+      name: "About Us ",
+      href: "#",
+    },
+    {
+      name: "Contact",
+      href: "#",
+    },
+  ];
+
   return (
     <div className="flex flex-col justify-between h-screen">
       <nav className="flex justify-between bg-slate-300 p-5">
@@ -14,45 +37,31 @@ function EcommerceSite() {
           Cozy
         </div>
 
-        <div>
-          <ul className="flex">
-            <li className="m-3">
-              <a>Shop</a>
+        <ul className="flex">
+          {tabs.map(({ name, href }, index) => (
+            <li className="m-3" key={index}>
+              <a href={href}>{name}</a>
             </li>
-            <li className="m-3">
-              <a>collective</a>
-            </li>
-            <li className="m-3">
-              <a>Designers</a>
-            </li>
-            <li className="m-3">
-              <a>About Us</a>
-            </li>
-            <li className="m-3">
-              <a>Contact</a>
-            </li>
-          </ul>
-        </div>
+          ))}
+        </ul>
 
-        <div>
-          <ul className="flex">
-            <li className="m-3">
-              <a>
-                <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
-              </a>
-            </li>
-            <li className="m-3">
-              <a>
-                <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
-              </a>
-            </li>
-            <li className="m-3">
-              <a>
-                <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul className="flex">
+          <li className="m-3">
+            <a>
+              <FontAwesomeIcon icon={faBars} />
+            </a>
+          </li>
+          <li className="m-3">
+            <a>
+              <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
+            </a>
+          </li>
+          <li className="m-3">
+            <a>
+              <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
+            </a>
+          </li>
+        </ul>
       </nav>
     </div>
   );
