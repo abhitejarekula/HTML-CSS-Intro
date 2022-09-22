@@ -1,4 +1,7 @@
-import EcommerceSite from "./components/EcommerceSite";
+import Pizza from "./components/Pizza";
+//import Bank from "./components/Bank";
+// import AddressPage from "./components/AddressPage";
+//import EcommerceSite from "./components/EcommerceSite";
 // import logo from "./logo.svg";
 // import "./App.css";
 // import LoginForm from "./components/LoginForm";
@@ -8,8 +11,11 @@ import EcommerceSite from "./components/EcommerceSite";
 function App() {
   return (
     <div className="App">
+      <Pizza />
+      {/*<Bank />
       <EcommerceSite />
-      {/* <h1>Hello World</h1>
+      <AddressPage />
+      <h1>Hello World</h1>
        <Form />
        <Tag /> 
       <LoginForm />  */}

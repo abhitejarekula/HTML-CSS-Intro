@@ -1,9 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChair } from "@fortawesome/free-solid-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChair,
+  faBars,
+  faMagnifyingGlass,
+  faCartShopping,
+} from "@fortawesome/free-solid-svg-icons";
 
 function EcommerceSite() {
   const tabs = [
@@ -28,12 +30,30 @@ function EcommerceSite() {
       href: "#",
     },
   ];
+  const tabCons = [
+    {
+      id: 1,
+
+      fontName: <FontAwesomeIcon icon={faBars} />,
+      href: "#",
+    },
+    {
+      id: 2,
+      fontName: <FontAwesomeIcon icon={faMagnifyingGlass} />,
+      href: "#",
+    },
+    {
+      id: 3,
+      fontName: <FontAwesomeIcon icon={faCartShopping} />,
+      href: "#",
+    },
+  ];
 
   return (
     <div className="flex flex-col justify-between h-screen">
       <nav className="flex justify-between bg-slate-300 p-5">
         <div className="m-3">
-          <FontAwesomeIcon icon={faChair}></FontAwesomeIcon>
+          <FontAwesomeIcon icon={faChair} />
           Cozy
         </div>
 
@@ -46,21 +66,13 @@ function EcommerceSite() {
         </ul>
 
         <ul className="flex">
-          <li className="m-3">
-            <a>
-              <FontAwesomeIcon icon={faBars} />
-            </a>
-          </li>
-          <li className="m-3">
-            <a>
-              <FontAwesomeIcon icon={faMagnifyingGlass}></FontAwesomeIcon>
-            </a>
-          </li>
-          <li className="m-3">
-            <a>
-              <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
-            </a>
-          </li>
+          {tabCons.map(({ id, fontName, href }) => {
+            return (
+              <li className="m-3" key={id}>
+                <a href={href}>{fontName}</a>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </div>
