@@ -1,4 +1,5 @@
-import Pizza from "./components/Pizza";
+import Cake from "./components/Cake";
+// import Pizza from "./components/Pizza";
 //import Bank from "./components/Bank";
 // import AddressPage from "./components/AddressPage";
 //import EcommerceSite from "./components/EcommerceSite";
@@ -11,8 +12,9 @@ import Pizza from "./components/Pizza";
 function App() {
   return (
     <div className="App">
-      <Pizza />
-      {/*<Bank />
+      <Cake />
+      {/* <Pizza />
+      <Bank />
       <EcommerceSite />
       <AddressPage />
       <h1>Hello World</h1>

@@ -1,14 +1,18 @@
-import { usestate } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { buyPizza, returnPizza } from "../../redux/pizza/pizzaActions";
 
 const Pizza = () => {
-  const [Inventory, setInventory] = usestate(50);
+  const inventory = useSelector((state) => state);
+  const dispatch = useDispatch();
 
-  const handleBought = () => {
-    setInventory((prevInv) => prevInv - 1);
+  const handleBuy = () => {
+    const action = buyPizza();
+    dispatch(action);
   };
 
-  const handleReturned = () => {
-    setInventory((prevInv) => prevInv + 1);
+  const handleReturn = () => {
+    const action = returnPizza();
+    dispatch(action);
   };
 
   return (
@@ -17,14 +21,14 @@ const Pizza = () => {
         <strong>Pizza Store</strong>
       </h1>
       <h2>
-        <strong>Inventory : ${Inventory}</strong>
+        <strong>Inventory : {inventory}</strong>
       </h2>
 
-      <button className="border p-2 rounded-md" onClick={handleBought}>
-        Bought
+      <button className="border p-2 rounded-md" onClick={handleBuy}>
+        Buy
       </button>
-      <button className="border p-2 rounded-md" onClick={handleReturned}>
-        Returned
+      <button className="border p-2 rounded-md" onClick={handleReturn}>
+        Return
       </button>
     </div>
   );
