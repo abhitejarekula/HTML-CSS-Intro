@@ -1,18 +1,20 @@
 import { BUYCAKE, RETURNCAKE, RESETCAKE } from "./cakeTypes";
 
-const initialCakeAvailable = 50;
+export const initialCakeAvailable = 50;
 
-const cakeReducer = (CakeAvailable = initialCakeAvailable, action) => {
+const cakeReducer = (cakeAvailable = initialCakeAvailable, action) => {
   switch (action.type) {
     case BUYCAKE:
-      return CakeAvailable - action.payload;
+      return cakeAvailable - action.payload;
     case RETURNCAKE:
-      return CakeAvailable + parseInt(action.payload);
+      return cakeAvailable + parseInt(action.payload);
     case RESETCAKE:
-      return (CakeAvailable = initialCakeAvailable);
+      return action.payload;
     default:
-      return CakeAvailable;
+      return cakeAvailable;
   }
 };
 
 export default cakeReducer;
+
+// 1. When reset cake is clicked an action is dispatched

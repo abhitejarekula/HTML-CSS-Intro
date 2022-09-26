@@ -1,4 +1,5 @@
 import { BUYCAKE, RETURNCAKE, RESETCAKE } from "./cakeTypes";
+import { initialCakeAvailable } from "./cakeReducer";
 
 export function buyCake(payload) {
   return {
@@ -14,9 +15,9 @@ export function returnCake(payload) {
   };
 }
 
-export function resetCake(payload) {
+export function resetCake() {
   return {
     type: RESETCAKE,
-    payload,
+    payload: initialCakeAvailable,
   };
 }
