@@ -1,4 +1,5 @@
-import Donut from "./components/Donut";
+import EcommerceSite from "./components/EcommerceSite";
+// import Donut from "./components/Donut";
 // import Cake from "./components/Cake";
 // import Pizza from "./components/Pizza";
 //import Bank from "./components/Bank";
@@ -13,11 +14,11 @@ import Donut from "./components/Donut";
 function App() {
   return (
     <div className="App">
-      <Donut />
+      <EcommerceSite />
       {/* <Cake />
       <Pizza />
       <Bank />
-      <EcommerceSite />
+      <Donut />
       <AddressPage />
       <h1>Hello World</h1>
        <Form />

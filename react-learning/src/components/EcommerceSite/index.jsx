@@ -6,6 +6,7 @@ import {
   faMagnifyingGlass,
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
+import ItemDiscription from "./ItemDiscription";
 
 function EcommerceSite() {
   const tabs = [
@@ -50,31 +51,37 @@ function EcommerceSite() {
   ];
 
   return (
-    <div className="flex flex-col justify-between h-screen">
-      <nav className="flex justify-between bg-slate-300 p-5">
-        <div className="m-3">
-          <FontAwesomeIcon icon={faChair} />
-          Cozy
-        </div>
+    <div>
+      <div className="flex flex-col justify-between h-screen">
+        <nav className="flex justify-between bg-slate-300 p-5">
+          <div className="m-3">
+            <FontAwesomeIcon icon={faChair} />
+            Cozy
+          </div>
 
-        <ul className="flex">
-          {tabs.map(({ name, href }, index) => (
-            <li className="m-3" key={index}>
-              <a href={href}>{name}</a>
-            </li>
-          ))}
-        </ul>
-
-        <ul className="flex">
-          {tabCons.map(({ id, fontName, href }) => {
-            return (
-              <li className="m-3" key={id}>
-                <a href={href}>{fontName}</a>
+          <ul className="flex">
+            {tabs.map(({ name, href }, index) => (
+              <li className="m-3" key={index}>
+                <a href={href}>{name}</a>
               </li>
-            );
-          })}
-        </ul>
-      </nav>
+            ))}
+          </ul>
+
+          <ul className="flex">
+            {tabCons.map(({ id, fontName, href }) => {
+              return (
+                <li className="m-3" key={id}>
+                  <a href={href}>{fontName}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
+
+      <div>
+        <ItemDiscription />
+      </div>
     </div>
   );
 }

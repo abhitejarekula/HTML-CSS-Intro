@@ -1,6 +1,7 @@
 import { createStore } from "redux";
+import counterReducer from "./counter/counterReducer";
 // import cakeReducer from "./cake/cakeReducer";
-import donutReducer from "./donut/donutReducer";
+// import donutReducer from "./donut/donutReducer";
 // import pizzaReducer from "./pizza/pizzaReducer";
 // import balanceReducer from "./balance/balanceReducer";
 
@@ -8,5 +9,6 @@ import donutReducer from "./donut/donutReducer";
 // const store = createStore(balanceReducer);
 // const store = createStore(pizzaReducer);
 // const store = createStore(cakeReducer);
-const store = createStore(donutReducer);
+// const store = createStore(donutReducer);
+const store = createStore(counterReducer);
 export default store;
