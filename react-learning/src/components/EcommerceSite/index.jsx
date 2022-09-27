@@ -52,7 +52,7 @@ function EcommerceSite() {
 
   return (
     <div>
-      <div className="flex flex-col justify-between h-screen">
+      <div className="flex flex-col justify-between ">
         <nav className="flex justify-between bg-slate-300 p-5">
           <div className="m-3">
             <FontAwesomeIcon icon={faChair} />
