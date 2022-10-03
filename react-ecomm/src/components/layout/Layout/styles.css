@@ -1,0 +1,41 @@
+.navbar {
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid black;
+}
+
+.middle-nav {
+	list-style: none;
+	display: flex;
+}
+
+.middle-nav-list {
+	margin-right: 10px;
+}
+.right-nav {
+	display: flex;
+	list-style: none;
+	margin: 3;
+}
+
+.right-nav-list {
+	/* margin-right: 10px; */
+	padding: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	padding: 5px;
+}
+
+.right-icons {
+	text-decoration: none;
+	color: black;
+}
+
+.right-nav-list:nth-child(3) {
+	height: 100%;
+	border-left: 1px solid black;
+}

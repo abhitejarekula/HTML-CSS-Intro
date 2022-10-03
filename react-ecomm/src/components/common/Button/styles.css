@@ -1,0 +1,27 @@
+.default-btn {
+	background-color: #3aa29f;
+	color: #ffffff;
+	font-weight: bold;
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+	border: none;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	cursor: pointer;
+}
+
+.unfilled-btn {
+	background-color: #ffffff;
+	color: #eb9898;
+	font-weight: bold;
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
+	border: none;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	cursor: pointer;
+}
