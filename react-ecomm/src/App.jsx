@@ -1,13 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/layout/Layout";
-import AboutUs from "./pages/about-us";
-import Auth from "./pages/auth";
-import Login from "./pages/auth/Login";
-import Register from "./pages/auth/Register";
-import Cart from "./pages/cart";
-import Contact from "./pages/contact";
+import AboutUs from "./pages/AboutUs";
+import Auth from "./pages/Auth";
+import Login from "./pages/Auth/Login";
+import Register from "./pages/Auth/Register";
+import Cart from "./pages/Cart";
+import Contact from "./pages/Contact";
 import Home from "./pages/Home";
+import Checkout from "./pages/Checkout";
 
 function App() {
 	return (
@@ -28,6 +29,11 @@ function App() {
 					</Route>
 
 					<Route path="cart" element={<Cart />} />
+
+					<Route
+						path="checkout"
+						element={<Checkout />}
+					/>
 
 					<Route
 						path="about-us"

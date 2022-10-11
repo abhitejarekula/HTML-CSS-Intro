@@ -1,5 +1,5 @@
 import { INCREASE, DECREASE } from "./counterTypes";
 
-export const increase = () => ({ type: INCREASE, payload: 1 });
+export const increase = (payload) => ({ type: INCREASE, payload });
 
-export const decrease = () => ({ type: DECREASE, payload: 1 });
+export const decrease = (payload) => ({ type: DECREASE, payload });

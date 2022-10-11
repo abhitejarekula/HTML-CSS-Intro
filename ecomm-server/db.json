@@ -1,0 +1,99 @@
+{
+	"chairs": [
+		{
+			"id": 1,
+			"name": "Osmond Armchair",
+			"color": "Gunared Beige",
+			"stock": 100,
+			"price": "$100",
+			"rating": "4.8",
+			"manufacturer": "Osmond"
+		},
+		{
+			"id": 2,
+			"name": "Osmond Armchair",
+			"color": "Blizzard White",
+			"stock": 100,
+			"price": "$100",
+			"rating": "4.8",
+			"manufacturer": "Osmond"
+		},
+		{
+			"id": 3,
+			"name": "Osmond Armchair",
+			"color": "Black",
+			"stock": 100,
+			"price": "$100",
+			"rating": "4.8",
+			"manufacturer": "Osmond"
+		}
+	],
+	"profile": {
+		"name": "Jake",
+		"cartId": 1,
+		"shippingAddress": 1,
+		"mailingAddress": 2
+	},
+	"addresses": [
+		{
+			"id": 1,
+			"street": "321 Main St",
+			"unit": "1",
+			"city": "Sunnyvale",
+			"state": "California",
+			"zipcode": "94235",
+			"country": "USA"
+		},
+		{
+			"id": 2,
+			"street": "123 Main St",
+			"unit": "2",
+			"city": "Sunnyvale",
+			"state": "California",
+			"zipcode": "94235",
+			"country": "USA"
+		},
+		{
+			"id": 3,
+			"street": "321 Wall St",
+			"unit": "",
+			"city": "New York City",
+			"state": "New York",
+			"zipcode": "54569",
+			"country": "USA"
+		}
+	],
+	"carts": [
+		{
+			"id": 1,
+			"items": [
+				{
+					"id": 1,
+					"name": "Osmond Armchair",
+					"color": "Gunared Beige",
+					"quantity": 1,
+					"price": "$100"
+				},
+				{
+					"id": 2,
+					"name": "Osmond Armchair",
+					"color": "Black",
+					"quantity": 1,
+					"price": "$100"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"items": [
+				{
+					"id": 1,
+					"name": "Osmond Armchair",
+					"color": "Gunared Beige",
+					"quantity": 1,
+					"price": "$100"
+				}
+			]
+		}
+	]
+}

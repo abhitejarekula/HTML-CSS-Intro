@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../../Button";
 import "./styles.css";
 
-const OrderSummary = () => {
+const OrderSummary = ({ buttonText, onClick }) => {
 	const content = [
 		{
 			id: 1,
@@ -84,8 +84,11 @@ const OrderSummary = () => {
 				<br />
 
 				<div>
-					<Button className="check-out">
-						Proceed to CheckOut
+					<Button
+						className="check-out"
+						onClick={onClick}
+					>
+						{buttonText}
 					</Button>
 				</div>
 			</div>

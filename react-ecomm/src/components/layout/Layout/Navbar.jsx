@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./styles.css";
 import logo from "../../../assets/logo/logo.svg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
 	const tabs = [
@@ -51,6 +52,7 @@ function Navbar() {
 			id: 3,
 			fontName: <FontAwesomeIcon icon={faCartShopping} />,
 			href: "#",
+			link: "/cart",
 		},
 	];
 
@@ -71,19 +73,25 @@ function Navbar() {
 			</ul>
 
 			<ul className="right-nav">
-				{tabCons.map(({ id, fontName, href }) => {
+				{tabCons.map(({ id, fontName, href, link }) => {
 					return (
-						<li
-							className="right-nav-list"
-							key={id}
-						>
-							<a
-								className="right-icons"
-								href={href}
+						<Link to={link}>
+							<li
+								className="right-nav-list"
+								key={id}
 							>
-								{fontName}
-							</a>
-						</li>
+								<a
+									className="right-icons"
+									href={
+										href
+									}
+								>
+									{
+										fontName
+									}
+								</a>
+							</li>
+						</Link>
 					);
 				})}
 			</ul>
