@@ -26,7 +26,7 @@ const Layout = () => {
 			}
 		}
 
-		fetchData(`http://localhost:5000/profile`, controller, setUser);
+		fetchData(`http://localhost:3001/profile`, controller, setUser);
 
 		return () => {
 			controller.abort();

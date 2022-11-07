@@ -36,7 +36,7 @@ const Cart = () => {
 		}
 
 		fetchData(
-			`http://localhost:5000/carts/${user.cartId}`,
+			`http://localhost:3001/carts/${user.cartId}`,
 			controller,
 			setCart
 		);
@@ -49,9 +49,7 @@ const Cart = () => {
 	return (
 		<div className="cart-container">
 			<div className="cart-left">
-				<CartItems
-					cartItems={carts?.cartItems?.items}
-				/>
+				<CartItems cartItems={carts?.items} />
 			</div>
 			<div className="cart-right">
 				<OrderSummary
